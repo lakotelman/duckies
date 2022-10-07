@@ -4,8 +4,10 @@ import DuckieContext from "../../contexts/duckie-context";
 const WholePreview = (props) => {
   const ctx = useContext(DuckieContext);
 
+
   return (
-    <div className="relative">
+    <>
+    <div id="capture" className="relative">
       <img
         id="base-duckie"
         className=" max-w-xl z-[-1] rounded-xl"
@@ -21,7 +23,17 @@ const WholePreview = (props) => {
         className=" max-w-xl top-0 absolute z-10 rounded-xl"
         src={ctx.head}
       />
-    </div>
+      <img
+        id="face"
+        className=" max-w-xl top-0 absolute z-9 rounded-xl"
+        src={ctx.face}
+      />
+      <img
+        id="mouth"
+        className=" max-w-xl top-0 absolute z-10 rounded-xl"
+        src={ctx.mouth}
+      />
+    </div></>
   );
 };
 

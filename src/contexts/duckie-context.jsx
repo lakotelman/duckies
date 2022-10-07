@@ -8,13 +8,19 @@ const DuckieContext = React.createContext({
   head: "",
   headOptions: [],
   headChangeHandler: (userInput) => {},
-  glasses: "",
+  face: "",
+  faceOptions: [],
+  faceChangeHandler: (userInput) => {},
+  mouth: "",
+  mouthOptions: [],
+  mouthChangeHandler: () => {},
 });
 
 export const DuckieContextProvider = (props) => {
   const [eyes, setEyes] = useState("duckie_bits/Eyes/EyesClosed.png");
   const [head, setHead] = useState("");
-  const [glasses, setGlasses] = useState("");
+  const [face, setFace] = useState("");
+  const [mouth, setMouth] = useState("");
 
   const eyeOptions = [
     "duckie_bits/Eyes/EyesClosed.png",
@@ -34,6 +40,23 @@ export const DuckieContextProvider = (props) => {
     "duckie_bits/Head/TopHat.png",
   ];
 
+  const faceOptions = [
+    "duckie_bits/FaceAccessories/EyePatch.png",
+    "duckie_bits/FaceAccessories/HeartGlasses.png",
+    "duckie_bits/FaceAccessories/Sunnies.png",
+    "duckie_bits/FaceAccessories/Glasses.png",
+    "duckie_bits/FaceAccessories/Monocle.png",
+  ];
+
+  const mouthOptions = [
+    "duckie_bits/Mouth/Quack.png",
+    "duckie_bits/Mouth/Relaxed.png",
+  ];
+
+  const mouthChangeHandler = (userInput) => {
+    setMouth(userInput);
+  };
+
   const eyeChangeHandler = (userInput) => {
     setEyes(userInput);
   };
@@ -42,16 +65,25 @@ export const DuckieContextProvider = (props) => {
     setHead(userInput);
   };
 
+  const faceChangeHandler = (userInput) => {
+    setFace(userInput);
+  };
+
   return (
     <DuckieContext.Provider
       value={{
         eyes: eyes,
         head: head,
-        glasses: glasses,
+        face: face,
+        mouth: mouth,
         eyeChangeHandler,
         headChangeHandler,
+        faceChangeHandler,
+        mouthChangeHandler,
         eyeOptions: eyeOptions,
         headOptions: headOptions,
+        faceOptions: faceOptions,
+        mouthOptions: mouthOptions,
       }}
     >
       {props.children}

@@ -17,6 +17,16 @@ const WholeDrawer = (props) => {
         optionsList={ctx.headOptions}
         changeHandler={ctx.headChangeHandler}
       />
+      <Drawer
+        title={"Face"}
+        optionsList={ctx.faceOptions}
+        changeHandler={ctx.faceChangeHandler}
+      />
+      <Drawer
+        title={"Mouth"}
+        optionsList={ctx.mouthOptions}
+        changeHandler={ctx.mouthChangeHandler}
+      />
     </div>
   );
 };
