@@ -8,6 +8,7 @@ const ButtonOption = (props) => {
       <img
         className="h-16 rounded-box hover:bg-orange-300"
         src={props.imagesrc}
+        title={props.imagesrc}
       />
     </button>
   );
