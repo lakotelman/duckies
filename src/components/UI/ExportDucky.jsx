@@ -10,10 +10,18 @@ const ExportDuckie = (props) => {
           <div id="duckieExport"></div>
         </div>
         <div className="w-full basis-1/3 flex flex-col justify-center">
-          <button className="bg-orange-300 text-slate-800 text-xl my-2 font-bold p-4 rounded-box w-full hover:bg-orange-200">
+          {/* <button className="bg-orange-300 text-slate-800 text-xl my-2 font-bold p-4 rounded-box w-full hover:bg-orange-200">
             Download Image
-          </button>
-          <button className="bg-orange-300 text-slate-800 text-xl my-2 font-bold p-4 rounded-box w-full hover:bg-orange-200">
+          </button> */}
+          <p>
+            {" "}
+            Right click the image and choose "Save As" to download your new
+            friend.
+          </p>
+          <button
+            onClick={props.hideExportHandler}
+            className="bg-orange-300 text-slate-800 text-xl my-2 font-bold p-4 rounded-box w-full hover:bg-orange-200"
+          >
             Close
           </button>
         </div>
