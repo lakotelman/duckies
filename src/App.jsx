@@ -1,19 +1,29 @@
 import { useState } from "react";
 import WholeDrawer from "./components/OptionsDrawer/WholeDrawer";
 import WholePreview from "./components/Preview/WholePreview";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import ExportDuckie from "./components/UI/ExportDucky";
 import html2canvas from "html2canvas";
 
 function App() {
+  const [exportShown, setExportShown] = useState(false);
+
+  const hideExportHandler = () => {
+    setExportShown(false);
+  };
+
   const downloadDuckieHandler = () => {
-    html2canvas(document.querySelector("#capture")).then((canvas) => {
-      document.body.appendChild(canvas);
+    setExportShown(true);
+    html2canvas(document.querySelector("#capture"), {
+      removeContainer: true,
+    }).then((canvas) => {
+      document.getElementById("duckieExport").appendChild(canvas);
     });
   };
 
   return (
     <>
+      {exportShown && <ExportDuckie hideExportHandler={hideExportHandler} />}
       <div className="mb-5 ">
         <h3 className="text-3xl">Create Your Own Ducky Pal</h3>
         <button
