@@ -24,13 +24,13 @@ function App() {
   return (
     <>
       {exportShown && <ExportDuckie hideExportHandler={hideExportHandler} />}
-      <div className="mb-5 mx-auto">
-        <h3 className="text-3xl">Create Your Own Ducky Pal</h3>
+      <div className="flex flex-row md:block justify-around items-center mb-5 mx-auto">
+        <h3 className="md:text-3xl p-0 m-0">Create Your Own Ducky Pal</h3>
         <button
           onClick={downloadDuckieHandler}
-          className="bg-slate-600 p-2 rounded-box hover:bg-orange-300 hover:text-slate-800"
+          className="bg-slate-600 md:p-2 p-1 rounded-box hover:bg-orange-300 hover:text-slate-800"
         >
-          Save My Ducky
+          Save!
         </button>
       </div>
       <div className="container mx-auto">
