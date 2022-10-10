@@ -6,7 +6,7 @@ import DuckieContext from "../../contexts/duckie-context";
 const WholeDrawer = (props) => {
   const ctx = useContext(DuckieContext);
   return (
-    <div>
+    <div className="my-auto">
       <Drawer
         title={"Eyes"}
         optionsList={ctx.eyeOptions}
