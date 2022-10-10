@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       {exportShown && <ExportDuckie hideExportHandler={hideExportHandler} />}
-      <div className="mb-5 mx-auto ">
+      <div className="mb-5 mx-auto">
         <h3 className="text-3xl">Create Your Own Ducky Pal</h3>
         <button
           onClick={downloadDuckieHandler}
