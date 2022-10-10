@@ -10,8 +10,8 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
   return (
-    <div className=" p-2 fixed mt-4 left-[17%] w-2/3 bg-slate-600 rounded-2xl shadow-lg z-10">
-      <div className="">{props.children}</div>
+    <div className=" p-3 fixed my-4 md:left-[17%] md:w-2/3 bg-slate-600 rounded-2xl shadow-lg z-10">
+      <div className="max-h-screen overflow-y-scroll">{props.children}</div>
     </div>
   );
 };

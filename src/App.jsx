@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       {exportShown && <ExportDuckie hideExportHandler={hideExportHandler} />}
-      <div className="mb-5 ">
+      <div className="mb-5 mx-auto ">
         <h3 className="text-3xl">Create Your Own Ducky Pal</h3>
         <button
           onClick={downloadDuckieHandler}
@@ -34,7 +34,7 @@ function App() {
         </button>
       </div>
       <div className="container mx-auto">
-        <div className="flex flex-row align-top justify-center gap-6">
+        <div className="flex flex-row flex-wrap align-top justify-center gap-6">
           <WholePreview />
           <WholeDrawer />
         </div>

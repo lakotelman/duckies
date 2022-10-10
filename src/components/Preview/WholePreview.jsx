@@ -10,27 +10,27 @@ const WholePreview = (props) => {
     <div id="capture" className="relative">
       <img
         id="base-duckie"
-        className=" max-w-xl z-[-1] rounded-xl"
+        className=" max-w-[100%] md:max-w-lg z-[-1] rounded-xl"
         src="duckie_bits/Duckie.jpg"
       />
       <img
         id="eyes"
-        className=" max-w-xl top-0 absolute z-8 rounded-xl"
+        className=" max-w-[100%] md:max-w-lg top-0 absolute z-8 rounded-xl"
         src={ctx.eyes}
       />
       <img
         id="head"
-        className=" max-w-xl top-0 absolute z-8 rounded-xl"
+        className="max-w-[100%] md:max-w-lg top-0 absolute z-8 rounded-xl"
         src={ctx.head}
       />
       <img
         id="face"
-        className=" max-w-xl top-0 absolute z-7 rounded-xl"
+        className="max-w-[100%] md:max-w-lg top-0 absolute z-7 rounded-xl"
         src={ctx.face}
       />
       <img
         id="mouth"
-        className=" max-w-xl top-0 absolute z-8 rounded-xl"
+        className=" sm:max-w-[100%] md:max-w-lg top-0 absolute z-8 rounded-xl"
         src={ctx.mouth}
       />
     </div></>
